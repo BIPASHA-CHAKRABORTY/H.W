@@ -32,6 +32,7 @@ int main()
     
     
     R.input(4, 5);
+    R.input(2, 9);
     
     
     R.Area();
