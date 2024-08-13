@@ -1,5 +1,4 @@
-// C++ Program to illustrate how to define the parameterized
-// constructor outside the class
+
 #include <iostream>
 #include <string.h>
 using namespace std;
@@ -15,7 +14,7 @@ public:
     void display();
 };
 
-// parameterized constructor outside class
+
 student::student(int no, char n[], double f)
 {
     rno = no;
