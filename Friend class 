@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Add {
+private:
+    int a = 10;
+    int b = 10;
+
+    friend class Sum;  // Declaring Sum as a friend class
+
+public:
+    void display() {
+        cout << "Value of a: " << a << "\nValue of b: " << b << endl;
+    }
+};
+
+class Sum {
+public:
+    void work(Add r) {  // Function that accesses private members of Add
+        int sum = r.a + r.b;
+        cout << "Sum: " << sum << endl;
+    }
+};
+
+int main() {
+    Add A;
+    Sum B;
+    B.work(A);  // Calling work() with object A
+    return 0;
+}
